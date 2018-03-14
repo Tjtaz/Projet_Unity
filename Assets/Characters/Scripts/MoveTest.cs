@@ -19,12 +19,15 @@ public class MoveTest : MonoBehaviour {
         Assert.IsNotNull(rb);
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //Run
         transform.Translate(Vector3.forward * RunSpeed * Time.deltaTime);
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        
         //Rail
         Rail = 0;
         if (Input.GetKey(KeyCode.RightArrow))
@@ -41,18 +44,23 @@ public class MoveTest : MonoBehaviour {
         {
             case 1:
                 {
-                    transform.position = new Vector3(2, transform.position.y, transform.position.z);
+                    //transform.position = new Vector3(2, transform.position.y, transform.position.z);
+                    Vector3 speed = Vector3.zero;
+                    transform.position = Vector3.SmoothDamp(transform.position, new Vector3(2, transform.position.y, transform.position.z), ref speed, 0.05f);
                 }
                 break;
             case -1:
                 {
-                    transform.position = new Vector3(-2, transform.position.y, transform.position.z);
-                    
+                    //transform.position = new Vector3(-2, transform.position.y, transform.position.z);
+                    Vector3 speed = Vector3.zero;
+                    transform.position = Vector3.SmoothDamp(transform.position, new Vector3(-2, transform.position.y, transform.position.z), ref speed, 0.05f);
                 }
                 break;
             default :
                 {
-                    transform.position = new Vector3(0, transform.position.y, transform.position.z);
+                    //transform.position = new Vector3(0, transform.position.y, transform.position.z);
+                    Vector3 speed = Vector3.zero;
+                    transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, transform.position.y, transform.position.z), ref speed, 0.05f);
                 }
                 break;
 
@@ -67,6 +75,8 @@ public class MoveTest : MonoBehaviour {
             v.y = JumpSpeed.y;
             //Saut
             gameObject.GetComponent<Rigidbody>().velocity = JumpSpeed;
+            //Raycast
+            
         }
     }
 
