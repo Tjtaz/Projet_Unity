@@ -30,12 +30,12 @@ public class MoveTest : MonoBehaviour {
         
         //Rail
         Rail = 0;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             Rail = 1;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.Q))
         { 
             Rail = -1;
         }
@@ -68,7 +68,7 @@ public class MoveTest : MonoBehaviour {
         
         //Jump
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             //Préparation saut
             Vector3 v = gameObject.GetComponent<Rigidbody>().velocity = JumpSpeed;
