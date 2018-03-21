@@ -10,7 +10,7 @@ public class MoveTest : MonoBehaviour {
     public float JumpSpeed;
     private int Rail;
     private BoxCollider characterCollider;
-
+    public int PV = 3;
 
     public Rigidbody rb;
 
@@ -94,5 +94,15 @@ public class MoveTest : MonoBehaviour {
             }
         }        
     }
+    public void takeDamage(int damage)
+    {
+        PV -= damage;
+        Debug.Log(PV);
+        if (PV <= 0)
+        {
+            Debug.Log(PV);
+        }
+    }
 
 }
+
