@@ -212,7 +212,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -345,7 +345,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|run
       takeName: Armature|run
-      firstFrame: 0
+      firstFrame: 17
       lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
