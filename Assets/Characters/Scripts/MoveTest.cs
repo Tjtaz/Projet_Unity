@@ -11,6 +11,7 @@ public class MoveTest : MonoBehaviour {
     private int Rail;
     private BoxCollider characterCollider;
     public int PV = 3;
+    public Animator MyAnim;
 
     public Rigidbody rb;
 
@@ -77,6 +78,7 @@ public class MoveTest : MonoBehaviour {
                 rb.AddForce(transform.up * JumpSpeed, ForceMode.Impulse);
                 characterCollider.size = new Vector3(characterCollider.size.x, 2.0f, characterCollider.size.z);
                 characterCollider.center = new Vector3(characterCollider.center.x, 0.5f, characterCollider.center.z);
+                MyAnim.SetTrigger("Jump");
             }
 
 
@@ -85,6 +87,7 @@ public class MoveTest : MonoBehaviour {
             {
                 characterCollider.size = new Vector3(characterCollider.size.x, 1f, characterCollider.size.z);
                 characterCollider.center = new Vector3(characterCollider.center.x, 0f, characterCollider.center.z);
+                MyAnim.SetTrigger("Glissade");
 
             }
             else
@@ -100,6 +103,7 @@ public class MoveTest : MonoBehaviour {
         Debug.Log(PV);
         if (PV <= 0)
         {
+            MyAnim.SetTrigger("Mort");
             Debug.Log(PV);
         }
     }

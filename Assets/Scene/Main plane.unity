@@ -805,6 +805,16 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114768160800734112, guid: 2035bf5a1a9a6a743be92fc98849e481,
+        type: 2}
+      propertyPath: MyAnim
+      value: 
+      objectReference: {fileID: 1942060035}
+    - target: {fileID: 114768160800734112, guid: 2035bf5a1a9a6a743be92fc98849e481,
+        type: 2}
+      propertyPath: PV
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2035bf5a1a9a6a743be92fc98849e481, type: 2}
   m_IsPrefabParent: 0
