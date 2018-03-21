@@ -123,4 +123,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e757f476ddb73d944b4f0a54bc096749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hero: {fileID: 1751622436057156, guid: 2035bf5a1a9a6a743be92fc98849e481, type: 2}
