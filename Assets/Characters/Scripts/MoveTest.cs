@@ -69,7 +69,7 @@ public class MoveTest : MonoBehaviour {
         }
         
 
-        if (rb.velocity.y >= -0.05 && rb.velocity.y <= 0.05)
+        if (rb.velocity.y >= -0.08 && rb.velocity.y <= 0.08)
         {
             //Jump
             if (Input.GetKeyDown(KeyCode.Z))
@@ -85,6 +85,7 @@ public class MoveTest : MonoBehaviour {
             {
                 characterCollider.size = new Vector3(characterCollider.size.x, 1f, characterCollider.size.z);
                 characterCollider.center = new Vector3(characterCollider.center.x, 0f, characterCollider.center.z);
+
             }
             else
             {
