@@ -31,27 +31,27 @@ public class SpawnCubes : MonoBehaviour
             coolDownTimer = 0;
         }
 
-        if (Input.GetKeyDown("kp_uparrow") && coolDownTimer ==0)
+        if (Input.GetKeyDown(KeyCode.RightShift) && coolDownTimer ==0)
         {
             SpawnCubeMiddle();
             coolDownTimer = coolDown;
         }
-        if (Input.GetKeyDown("kp_leftarrow") && coolDownTimer == 0)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && coolDownTimer == 0)
         {
             SpawnCubeLeft();
             coolDownTimer = coolDown;
         }
-        if (Input.GetKeyDown("kp_rightarrow") && coolDownTimer == 0)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && coolDownTimer == 0)
         {
             SpawnCubeRight();
             coolDownTimer = coolDown;
         }
-        if (Input.GetKeyDown("kp_downarrow") && coolDownTimer == 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && coolDownTimer == 0)
         {
             SpawnCubeUp();
             coolDownTimer = coolDown;
         }
-        if (Input.GetKeyDown("kp_5") && coolDownTimer == 0)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && coolDownTimer == 0)
         {
             SpawnCubeDown();
             coolDownTimer = coolDown;
