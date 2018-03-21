@@ -81,13 +81,14 @@ ModelImporter:
     7400000: Armature|ArmatureAction
     7400002: "Armature|d\xE9gat"
     7400004: Armature|Esquive a droite
-    7400006: Armature|glissade
+    7400006: Armature|glissadedown
     7400008: Armature|glissade.001
     7400010: Armature|glissade.002
     7400012: Armature|jump
     7400014: Armature|Mort
     7400016: Armature|run
     7400018: Armature|victoire
+    7400020: Armature|glissadeup
     9500000: //RootNode
     10800000: Lamp
     13700000: Cube.001
@@ -203,10 +204,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|glissade
+      name: Armature|glissadedown
       takeName: Armature|glissade
       firstFrame: 0
-      lastFrame: 15
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -374,6 +375,34 @@ ModelImporter:
       name: Armature|victoire
       takeName: Armature|victoire
       firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|glissadeup
+      takeName: Armature|glissade
+      firstFrame: 14
       lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0

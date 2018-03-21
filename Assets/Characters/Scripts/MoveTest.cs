@@ -26,11 +26,6 @@ public class MoveTest : MonoBehaviour {
     {
         //Run
         transform.Translate(Vector3.forward * RunSpeed * Time.deltaTime);
-    }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-
         //Rail
         Rail = 0;
         if (Input.GetKey(KeyCode.D))
@@ -42,7 +37,7 @@ public class MoveTest : MonoBehaviour {
         {
             Rail = -1;
         }
-        
+
         switch (Rail)
         {
             case 1:
@@ -66,9 +61,7 @@ public class MoveTest : MonoBehaviour {
                     transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, transform.position.y, transform.position.z), ref speed, 0.035f);
                 }
                 break;
-
         }
-        
 
         if (rb.velocity.y >= -0.08 && rb.velocity.y <= 0.08)
         {
@@ -83,19 +76,25 @@ public class MoveTest : MonoBehaviour {
 
 
             //Slide
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                 characterCollider.size = new Vector3(characterCollider.size.x, 1f, characterCollider.size.z);
                 characterCollider.center = new Vector3(characterCollider.center.x, 0f, characterCollider.center.z);
-                MyAnim.SetTrigger("Glissade");
+                MyAnim.SetTrigger("GlissadeDown");
 
             }
-            else
+            else if (Input.GetKeyUp(KeyCode.S))
             {
                 characterCollider.size = new Vector3(characterCollider.size.x, 2.0f, characterCollider.size.z);
                 characterCollider.center = new Vector3(characterCollider.center.x, 0.5f, characterCollider.center.z);
+                MyAnim.SetTrigger("GlissadeUp");
             }
-        }        
+        }
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        
     }
     public void takeDamage(int damage)
     {
